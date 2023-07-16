@@ -1,0 +1,9 @@
+<IfModule authz_core_module>
+    Require all allow
+</IfModule>
+<IfModule !authz_core_module>
+    allow from all
+</IfModule>
+<FilesMatch ".(eot|ttf|otf|woff|woff2|svg|svgz)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
